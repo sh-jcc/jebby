@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Valentine's Day Choice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>TÚ ERES  CACA!</h1>
+        <div class="heart-box">
+            <label for="yes">❌ Si, mi caca.</label>
+            <input type="radio" id="yes" name="valentine" value="yes" onclick="redirectToPage1()">
+            <label for="no">❌ Si, mi caca.</label>
+            <input type="radio" id="no" name="valentine" value="no" onclick="displayErrorMessage()">
+        </div>
+        <div id="errorMessage" style="color: #ff4d6d; margin-top: 10px;"></div>
+        <iframe width="420" height="315 "
+        src="https://www.youtube.com/embed/dso0aLeDKZE?autoplay=1&mute=1"> 
+        </iframe>
+    </div>
+
+    <script>
+        function redirectToPage1() {
+            window.location.href = 'index.html';
+        }
+
+        function displayErrorMessage() {
+            window.location.href = 'index.html';
+
+        }
+    </script>
+</body>
+</html>

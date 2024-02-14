@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Valentine's Day Choice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>I swam across the ocean, to ask you something.</h1>
+        <h1>Who are you?</h1>
+    <form id="dob-form">
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob">
+        <br>
+        <button type="This is me">Submit</button>
+    </form>
+    <div id="heart-container">
+    <div id="error-message"></div>
+    
+    <script src="page_1_script.js"></script>
+    <script>
+        document.getElementById("dob-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            var dobInput = document.getElementById("dob").value;
+            var dob = new Date(dobInput);
+            var targetDate = new Date("2003-02-21");
+
+            if (dob.getTime() === targetDate.getTime()) {
+                window.location.href = "index1.html";
+            } else {
+                document.getElementById("error-message").innerText = "Error: You are NOT jebby...";
+            }
+        });
+    </script>
+</body>
+</html>

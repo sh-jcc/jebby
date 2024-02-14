@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Valentine's Day Choice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>And I would give up every cent, just to be by your side.</h1>
+        <div class="heart-box">
+            <label for="yes">❤ Continue</label>
+            <input type="radio" id="yes" name="valentine" value="yes" onclick="redirectToPage1()">
+            <label for="no">❤ Continue</label>
+            <input type="radio" id="no" name="valentine" value="no" onclick="displayErrorMessage()">
+        </div>
+        <div id="errorMessage" style="color: #ff4d6d; margin-top: 10px;"></div>
+        <div id="heart-container">
+    </div>
+
+    <script src="page_1_script.js"></script>
+    <script>
+        function redirectToPage1() {
+            window.location.href = 'index_1e.html';
+        }
+
+        function displayErrorMessage() {
+            window.location.href = 'index_1e.html';
+
+        }
+    </script>
+</body>
+</html>

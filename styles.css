@@ -1,0 +1,45 @@
+body {
+    background-color: #f7e3e3; /* Light pink background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #c70039; /* Dark pink text color */
+}
+
+.yes-no-box {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: 2px solid #c70039; /* Dark pink border */
+    border-radius: 5px;
+    color: #c70039;
+    background-color: #fff;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #c70039;
+    color: #fff;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Valentine's Day Choice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Are you:</h1>
+        <form id="characteristics-form">
+            <label class="checkbox-label" for="cute">
+                <input type="checkbox" id="cute" name="characteristic" value="cute">
+                Cute
+            </label>
+            
+            <label class="checkbox-label" for="small">
+                <input type="checkbox" id="small" name="characteristic" value="small">
+                Small
+            </label>
+            
+            <label class="checkbox-label" for="plump">
+                <input type="checkbox" id="plump" name="characteristic" value="plump">
+                Plump
+            </label>
+            
+            <label class="checkbox-label" for="pretty">
+                <input type="checkbox" id="pretty" name="characteristic" value="pretty">
+                Pretty
+            </label>
+            
+            <label class="checkbox-label" for="smart">
+                <input type="checkbox" id="smart" name="characteristic" value="smart">
+                Smart
+            </label>
+            
+            <label class="checkbox-label" for="funny">
+                <input type="checkbox" id="funny" name="characteristic" value="funny">
+                Funny
+            </label>
+            
+            <label class="checkbox-label" for="perfect">
+                <input type="checkbox" id="perfect" name="characteristic" value="perfect">
+                Perfect
+            </label>
+            
+            <button type="submit">Submit</button>
+        </form>
+    <div id="error-message"></div>
+    <div id="heart-container">
+    </div>
+
+    <script>
+        document.getElementById("characteristics-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            var allChecked = true;
+            
+            checkboxes.forEach(function(checkbox) {
+                if (!checkbox.checked) {
+                    allChecked = false;
+                }
+            });
+
+            if (allChecked) {
+                window.location.href = "index_1a.html"; 
+            } else {
+                document.getElementById("error-message").innerText = "Error: You are NOT jebby...";
+            }
+        });
+    </script>
+
+
+    <script src="page_1_script.js"></script>
+</body>
+</html>

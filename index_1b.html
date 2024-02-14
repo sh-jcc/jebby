@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles1.css">
+    <title>Valentine's Day Choice</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Your uncondtional love is the greatest gift, so pure and plump.</h1>
+        <div class="heart-box">
+            <label for="yes">❤ Agreed</label>
+            <input type="radio" id="yes" name="valentine" value="yes" onclick="redirectToPage1()">
+            <label for="no">❌ Disagreed</label>
+            <input type="radio" id="no" name="valentine" value="no" onclick="displayErrorMessage()">
+        </div>
+        <div id="errorMessage" style="color: #ff4d6d; margin-top: 10px;"></div>
+        <div id="heart-container">
+    </div>
+
+    <script src="page_1_script.js"></script>
+    <script>
+        function redirectToPage1() {
+            window.location.href = 'index_1c.html';
+        }
+
+        function displayErrorMessage() {
+            window.location.href = 'index2.html';
+
+        }
+    </script>
+</body>
+</html>

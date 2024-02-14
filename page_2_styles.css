@@ -1,0 +1,93 @@
+body {
+    background-color: #f7e3e3; /* Light pink background */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url("vDayImage.png");
+    background-size: 1100px;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: #c70039; /* Dark pink text color */
+}
+
+.yes-no-box {
+    margin-top: 20px;
+}
+
+label {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    cursor: pointer;
+    padding: 8px 16px;
+    border: 2px solid #c70039; /* Dark pink border */
+    border-radius: 5px;
+    color: #c70039;
+    background-color: #fff;
+}
+
+input[type="radio"]:checked + label {
+    background-color: #c70039;
+    color: #fff;
+}
+
+
+#heart-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d; /* Red heart color */
+    transform: rotate(-45deg);
+    animation: fall 3s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #ff4d4d; /* Red heart color */
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -10px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: 10px;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(-45deg);
+        opacity: 0;
+    }
+}
